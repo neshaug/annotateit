@@ -11,5 +11,8 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+GET     /notes/show/{id}                        Notes.show
+POST    /notes/save                             Notes.save
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
