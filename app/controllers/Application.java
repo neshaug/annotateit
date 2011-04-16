@@ -10,8 +10,11 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        List<User> users = User.all().fetch();
-        renderJSON(users);
+        render();
+    }
+    
+    public static void iframed(String url) {
+        render(url);
     }
 
 }

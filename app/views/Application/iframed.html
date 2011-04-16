@@ -1,0 +1,28 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<script type="text/javascript">
+(function () {
+    
+    function start() {
+        // set size
+        $("#browser").height($(window).height() - $("#addressbar").height());
+        $("#browser").width($(window).width());
+        
+        $.ajax({
+            url: "/notes/all",
+            success: function (data) {
+                console.log(data);
+            },
+            failure: function () {
+                console.log("fail");
+            }
+        })
+    };
+    
+    $(document).ready(start);
+}());
+</script>
+<form name="addressbar" id="addressbar" method="get">
+    <label labelfor="url">url<input name="url" size="100" value="${url}"></input></label><input type="button" value="go" id="go"/>
+</form>
+<iframe id="browser" src="${url}"></iframe>
