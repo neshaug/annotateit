@@ -1,3 +1,11 @@
-User(ola):
-    username: ola
-    password: ola
+User(test):
+    username: test
+    password: test
+
+Note(note):
+    content: awesome site
+    xpath: something
+    url: http://somewhere.tld
+    y: 0
+    x: 1
+    user: test
