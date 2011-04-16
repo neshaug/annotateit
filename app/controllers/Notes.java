@@ -25,13 +25,12 @@ public class Notes extends Controller {
         renderJSON(note);
     }
 
-    public static void all() {
-        final String cb = params.get("callback");
-        if (cb == null) {
+    public static void all(String callback) {
+        if(callback == null) {
             throw new IllegalArgumentException("Missing parameter: callback");
         }
-        Logger.info("Callback: %s", cb);
+        Logger.info("Callback: %s", callback);
         final List<Note> notes = Note.all().fetch();
-        renderText(toJSONP(cb, notes));
+        renderText(toJSONP(callback, notes));
     }
 }

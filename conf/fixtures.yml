@@ -1,11 +1,22 @@
-User(test):
+User(user):
     username: test
     password: test
-
+    
 Note(note):
     content: awesome site
-    xpath: something
-    url: http://somewhere.tld
+    xpath: html/body/div/table/td1
     y: 0
     x: 1
-    user: test
+    
+Note(notetwo):
+    content: great color
+    xpath: html/body/div
+    y: 2
+    x: 3
+        
+Sitenote(sitenote):
+    url: http://somewhere.tld    
+    user: user
+    notes: [note, notetwo]
+    hash: 1
+    created: 1

@@ -14,5 +14,8 @@ GET     /public/                                staticDir:public
 GET     /notes/show/{id}                        Notes.show
 POST    /notes/save                             Notes.save
 
+GET     /sitenotes/show/{hash}                  Sitenotes.show
+POST    /sitenotes/save                         Sitenotes.save
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

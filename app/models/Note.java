@@ -9,11 +9,7 @@ import play.db.jpa.Model;
 public class Note extends Model {
     public String content;
     public String xpath;
-    public String url;
     
     public int x;
     public int y;
-    
-    @ManyToOne
-    public User user;
 }
