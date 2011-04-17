@@ -1,0 +1,1 @@
+javascript:var i,s,ss=['http://127.0.0.1/public/javascripts/jquery-1.5.2.min.js','http://127.0.0.1/public/javascripts/annotateitb.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
